@@ -1,28 +1,131 @@
 body {
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 header {
   background-image: url('https://images.pexels.com/photos/8885140/pexels-photo-8885140.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 12rem;
   color: white;
   text-align: center;
-  padding: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+header nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 0;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav li {
+  margin: 0 1rem;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .posts {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
 .post-item {
   width: 300px;
   border: 1px solid #ccc;
-  padding: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.post-item:hover {
+  transform: translateY(-5px);
+}
+
+.post-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-item h3 {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   text-align: center;
 }
 
-img {
-  max-width: 100%;
+.post-item p {
+  padding: 0.5rem 1rem 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+
+footer a {
+  color: #ddd;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
 }
