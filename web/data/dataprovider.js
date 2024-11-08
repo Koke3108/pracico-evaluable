@@ -1,22 +1,13 @@
-var galeria = require("./data.json");
-var carta = require("./carta.json");
+var posts = require("./posts.json");
 
-function getGalleryData(){
-    return galeria;
-}
+function getAllPosts() { return posts; }
 
-function getAllCarta(){
-    return carta;
-}
+function getPostById(id) { return posts.find(a => a.id == id); }
 
-function getItemCarta(id){
-    const item = carta.filter( (a) => { return(a.id==id)} );
-    return item[0];
-}
-
+function getCategories() { return [...new Set(posts.map(post => post.category))]; }
 
 module.exports = {
-    getGalleryData,
-    getAllCarta,
-    getItemCarta
+    getAllPosts,
+    getPostById,
+    getCategories
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('./partials/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include('./partials/header') %>
+    </header>
+    <main>
+        <h1>
+            <%= post.title %>
+        </h1>
+        <img src="<%= post.image %>" alt="<%= post.title %>">
+        <div class="post-content">
+            <%= post.content %>
+        </div>
+    </main>
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
+</body>
+
+</html>
